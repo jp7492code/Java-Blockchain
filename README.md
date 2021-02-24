@@ -11,7 +11,7 @@ The two background threads will sleep a random number of seconds which challenge
 
 A third Monitor thread in the background will check on progress and end the app once lost or won.
 
-So it's just a simple game to allow you to get some coding experience with multithreading and Merkle roots.
+So it's just a app that allow you to get some coding experience with multithreading and Merkle roots.
 
 2.	DETAILS
 
