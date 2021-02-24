@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class Util {
 	
@@ -60,17 +61,11 @@ public class Util {
 		}
 	}
 	/*This will pass in the string which will be the questions you want to display to user*/
-    public String promptUser(String question){
-        Scanner scan = new Scanner(System.in);
-        System.out.println(question);
-        return scan.nextLine().trim();
+    public String promptUser(String sQuestion){
+        String sAnswer = JOptionPane.showInputDialog(sQuestion);
+        return sAnswer;
     }
 
-    /*Simple print statement to make my coding simpler*/
-    public void print(String displayText){
-        System.out.println(displayText);
-    }
-    
 	public void sleepRandomTime(String sThreadName){
 
 		// Gets random number between 0 and 5 and then adds 3, meaning between 3 and 8 now.
@@ -80,14 +75,6 @@ public class Util {
 	    sleep(iSleepTime);
 	    
 	}
-	
-	/*This function will print out the array lists*/
-    public void printList(ArrayList<String> list){
-        for(String str : list){
-            print(str +" ");
-        }
-        System.out.println();
-    }
     
 	public void sleep(int iSeconds) {
 		try {

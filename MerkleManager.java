@@ -7,7 +7,7 @@ public class MerkleManager {
     public static String merkleRoot = null;
     public static int strikes = 0;
 
-    public void manageFunction() {
+    public void manage() {
         // *** Create an instance of the Util class ***
         Util oUtil = new Util();
 
@@ -16,7 +16,7 @@ public class MerkleManager {
         Thread oRogueThread = new Thread(new RogueThread());
         Thread oMonitorThread = new Thread(new MonitorThread());
 
-        userEnteredExpectedMerkleRoot = oUtil.promptUser("Enter the expected merkle root: ");
+        userEnteredExpectedMerkleRoot = oUtil.promptUser("Enter the expected merkle root (use https://www.xorbin.com/tools/sha256-hash-calculator): ");
 
         // *** Start three threads ***
         oMerkleThread.start();
@@ -28,8 +28,7 @@ public class MerkleManager {
         }
 
     }
-
-    public String grabWord(){
+    public static synchronized String grabWord() {
         String temp = usersEnteredWord;
         usersEnteredWord = null;
         return temp;
