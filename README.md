@@ -1,4 +1,4 @@
-# Java-Blockchain
+# Java Blockchain App
 The user first enters in the merkle root of four words the user will try to give to the merkle thread... this merkle root can be manually figured out by the user from the "NOTE" description on the top of page 2.
 
 Then a multithreaded portion of the app allows user submission of Strings on the main thread, and each of those Strings is grabbed by a Merkle or Rogue background thread depending on the user’s timing.  
